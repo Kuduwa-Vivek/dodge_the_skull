@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/001-skull.png">
+    <title>DODGE THE SKULL - Game Rules</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Falling Bones Background Effect -->
+    <div class="bones-container"></div>
+    
+    <!-- Buy Cards Button - Top Right -->
+    <a href="buy-cards.html" class="top-buy-button">🛒 BUY</a>
+    
+    <div class="container">
+        <!-- Header with title -->
+        <header class="header">
+            <h1 class="game-title">DODGE THE SKULL</h1>
+            <div class="tagline-section fade-in">
+                <div class="tagline-line">
+                    <span class="tagline-text">CREATED</span>
+                </div>
+                <div class="tagline-line">
+                    <span class="tagline-text">WITH</span>
+                </div>
+                <div class="tagline-line highlight-tagline">
+                    <span class="tagline-text">STRATEGY</span>
+                    <span class="tagline-amp">&</span>
+                    <span class="tagline-text">CHAOS</span>
+                </div>
+                <div class="tagline-divider"></div>
+                <div class="tagline-warning">
+                    <span class="warning-text">SKILL REQUIRED</span>
+                    <span class="warning-subtext">LUCK <span class="wont-white">WON'T</span> SAVE YOU.</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Game Overview -->
+            <section class="rule-section fade-in">
+                <div class="section-divider">
+                    <span class="divider-skull">💀</span>
+                </div>
+                <h2 class="section-title">Game Overview</h2>
+                <div class="rule-content">
+                    <div class="rule-item">
+                        <span class="rule-label">Total Cards:</span>
+                        <span class="rule-value">104</span>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-label">Players:</span>
+                        <span class="rule-value">Minimum 4, Maximum 10</span>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-label">Points:</span>
+                        <span class="rule-value">Red Skull 1 Point, White Skull 3 Point</span>
+                    </div>
+                    <div class="rule-item highlight">
+                        <span class="rule-label">Objective:</span>
+                        <span class="rule-value">Collect the fewest skulls points by the end of the game</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Game Setup -->
+            <section class="rule-section fade-in">
+                <div class="section-divider">
+                    <span class="divider-skull">💀</span>
+                </div>
+                <h2 class="section-title">Game Setup</h2>
+                <div class="rule-content">
+                    <ul class="rule-list">
+                        <li>Shuffle all 104 cards.</li>
+                        <li>Each player receives 10 cards.</li>
+                        <li>No player may have more than 10 cards.</li>
+                        <li>Place 4 cards face-up on the table.</li>
+                        <li>Arrange them vertically to form 4 columns.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- How to Play -->
+            <section class="rule-section fade-in">
+                <div class="section-divider">
+                    <span class="divider-skull">💀</span>
+                </div>
+                <h2 class="section-title">How to Play (Each Round)</h2>
+                <div class="rule-content">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Card Selection</h3>
+                            <p>Each player secretly selects 1 card from their hand. Place the selected card face-down on the table. Do not reveal it until everyone has selected.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Reveal & Order</h3>
+                            <p>All players reveal their chosen cards at the same time. Arrange the revealed cards in descending order by number. <strong>Ignore skulls while ordering</strong> - Only numbers matter here.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Place Cards in Columns</h3>
+                            <p>Start with the highest revealed card.</p>
+                            <p>For each card:</p>
+                            <ul class="step-list">
+                                <li>Place it in the column where the top card is just higher than it.</li>
+                                <li>The numbers in a column must always go downward (descending).</li>
+                                <li>Choose the column where the number difference is the smallest.</li>
+                                <li>Keep placing cards one by one until any column gets a 6th card.</li>
+                            </ul>
+                            <p>When a column reaches the 6th card, the penalty rule applies.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Collect Cards (Penalty)</h3>
+                            <p>If your card becomes the 6th card in any column: You must collect the 5 cards above it from that column. Keep those cards aside (these are your penalty cards). Your card becomes the new top card of that column.</p>
+                            <p class="warning">⚠️ Important: Do NOT mix collected cards back into your deck.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Repeat</h3>
+                            <p>Continue the above steps until all players run out of cards.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Special Case Rule -->
+            <section class="rule-section fade-in special-rule">
+                <div class="section-divider">
+                    <span class="divider-skull">💀</span>
+                </div>
+                <h2 class="section-title">Special Case Rule</h2>
+                <div class="rule-content">
+                    <h3 class="subtitle">No Valid Column Available</h3>
+                    <p>If a player's revealed card cannot be placed in any of the 4 columns because:</p>
+                    <ul class="rule-list">
+                        <li>The card's number is higher than the top card of all columns, or</li>
+                        <li>It does not fit the descending order rule for any column</li>
+                    </ul>
+                    <div class="special-case-box">
+                        <h4>➤ Forced Column Pickup</h4>
+                        <p>The player must choose any one of the 4 columns. The player collects all cards from that chosen column as penalty cards. These collected cards are kept aside and must not be mixed back into the deck. The player's selected card is then placed as the new top card of that column.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rounds & Game End -->
+            <section class="rule-section fade-in">
+                <div class="section-divider">
+                    <span class="divider-skull">💀</span>
+                </div>
+                <h2 class="section-title">Rounds & Game End</h2>
+                <div class="rule-content">
+                    <ul class="rule-list">
+                        <li>The game is played for <strong>10 rounds</strong>.</li>
+                        <li>After all rounds are completed: Count the skulls on the cards you collected from the table.</li>
+                        <li>The player with the fewest skulls wins.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Tie Rule -->
+            <section class="rule-section fade-in">
+                <div class="section-divider">
+                    <span class="divider-skull">💀</span>
+                </div>
+                <h2 class="section-title">Tie Rule</h2>
+                <div class="rule-content">
+                    <p>If two or more players tie for the lowest skull count: Only the tied players play the game again. The winner of this replay is the final winner.</p>
+                </div>
+            </section>
+
+            <!-- Winning Condition -->
+            <section class="rule-section fade-in winning-section">
+                <div class="section-divider">
+                    <span class="divider-skull">💀</span>
+                </div>
+                <h2 class="section-title">Winning Condition</h2>
+                <div class="rule-content">
+                    <p class="winning-text">Survive ten rounds. Count your skulls points. The least cursed player wins.</p>
+                    <!-- The player with the least number of skulls after 10 rounds is the winner. -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Credits Button -->
+        <div class="credits-button-container fade-in">
+            <a href="credits.html" class="credits-button">
+                <span class="button-skull">💀</span>
+                <span class="button-text">VIEW CREDITS</span>
+                <span class="button-skull">💀</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

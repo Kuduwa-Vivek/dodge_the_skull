@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Cards - DODGE THE SKULL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Falling Bones Background Effect -->
+    <div class="bones-container"></div>
+    
+    <div class="container">
+        <!-- Header with title -->
+        <header class="header">
+            <h1 class="game-title">DODGE THE SKULL</h1>
+            <a href="index.html" class="back-button">← Back to Rules</a>
+        </header>
+
+        <!-- Buy Cards Form Section -->
+        <section class="form-section fade-in">
+            <div class="section-divider">
+                <span class="divider-skull">💀</span>
+            </div>
+            <!-- <h2 class="section-title">BUY</h2> -->
+            <div class="form-content">
+                <form class="buy-cards-form" id="buyCardsForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nickname" class="form-label">Nick Name</label>
+                        <input type="text" id="nickname" name="nickname" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" id="phone" name="phone" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea id="address" name="address" class="form-textarea" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="landmark" class="form-label">Landmark</label>
+                        <input type="text" id="landmark" name="landmark" class="form-input">
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <span class="button-skull">💀</span>
+                        <span class="button-text">SUBMIT ORDER</span>
+                        <span class="button-skull">💀</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="successPopup" class="success-popup">
+        <div class="success-popup-content">
+            <!-- <div class="success-icon">🛒</div> -->
+            <h2 class="success-title">ORDER PLACED!</h2>
+            <p class="success-message">Your request has been submitted successfully. We will contact you soon!</p>
+            <button class="success-close-btn" onclick="closeSuccessPopup()">CLOSE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Handle form submission
+        document.getElementById('buyCardsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                nickname: document.getElementById('nickname').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                landmark: document.getElementById('landmark').value
+            };
+            
+            // Here you can add code to send the data to a server
+            console.log('Form submitted:', formData);
+            
+            // Show success popup
+            showSuccessPopup();
+            
+            // Reset form
+            this.reset();
+        });
+
+        function showSuccessPopup() {
+            const popup = document.getElementById('successPopup');
+            popup.classList.add('show');
+        }
+
+        function closeSuccessPopup() {
+            const popup = document.getElementById('successPopup');
+            popup.classList.remove('show');
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('successPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuccessPopup();
+            }
+        });
+    </script>
+</body>
+</html>
